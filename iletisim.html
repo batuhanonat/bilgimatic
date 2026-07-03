@@ -17,21 +17,11 @@
 			</a>
 
 			<ul class="menu">
-			    <li>
-			    <a href="index.html" title="Anasayfa">Anasayfa</a>
-				</li>
-				<li>
-			    <a href="haberler.html" title="Haberler">Haberler</a>
-				</li>
-				<li>
-			    <a href="hakkimizda.html" title="Hakkımızda">Hakkımızda</a>
-				</li>
-				<li>
-			    <a href="fotograf-galerisi.html" title="Fotoğraf Galerisi">Fotoğraf Galerisi</a>
-				</li>
-				<li>
-			    <a href="iletisim.html" title="İletişim" class="secili">İletişim</a>
-				</li>
+			    <li><a href="index.html" title="Anasayfa">Anasayfa</a></li>
+				<li><a href="haberler.html" title="Haberler">Haberler</a></li>
+				<li><a href="hakkimizda.html" title="Hakkımızda">Hakkımızda</a></li>
+				<li><a href="fotograf-galerisi.html" title="Fotoğraf Galerisi">Fotoğraf Galerisi</a></li>
+				<li><a href="iletisim.html" title="İletişim" class="secili">İletişim</a></li>
 			</ul>
 		</div>
 		<div id="content">
@@ -49,26 +39,22 @@
 			<h2>İletişim Formu</h2>
 
 			<div class="formalani">
-			    <form class="formgonder" action="index.php" id="formgonder" name="formgonder" action="#" method="post">
+                <form class="formgonder" action="https://formspree.io/f/mnjklzoe" method="POST" id="formgonder" name="formgonder">
 				    <label for="ad_soyad">Ad Soyad: </label>
-					<input type="text" placeholder="Ad Soyad " name="ad_soyad" />
-					<br>
-					<br>
+					<input type="text" placeholder="Ad Soyad" name="ad_soyad" id="ad_soyad" required />
+					<br><br>
 					<label for="e_posta">E-Posta: </label>
-					<input type="text" placeholder=E-Posta " name="e_posta" />
-					<br>
-					<br>
+					<input type="email" placeholder="E-Posta" name="email" id="e_posta" required />
+					<br><br>
 					<label for="konu" >Konu: </label>
-					<input type="text" placeholder=Konu " name="konu" />
-					<br>
-					<br>
+					<input type="text" placeholder="Konu" name="konu" id="konu" required />
+					<br><br>
 					<label for="mesaj">Mesajınız: </label>
-					<textarea name="mesaj" placeholder="Mesajınız"></textarea>
-					<br>
-					<br>
+					<textarea name="message" id="mesaj" placeholder="Mesajınız" required></textarea>
+					<br><br>
 					<input type="submit" name="gonder" value="Mesajı Gönder" />
 				</form>
-			</div>
+                </div>
 
 		    <div style="clear:both;"></div>
 		</div>
