@@ -93,3 +93,50 @@
 #content .yazi p{
 	font-size: 15px;
 }
+
+/* --- İletişim Formu Yeni Stilleri --- */
+
+.formalani {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formalani label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.formalani input[type="text"],
+.formalani input[type="email"],
+.formalani textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formalani textarea {
+    height: 150px;
+}
+
+.formalani input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.formalani input[type="submit"]:hover {
+    background-color: #f00;
+}
