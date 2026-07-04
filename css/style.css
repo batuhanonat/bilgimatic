@@ -29,11 +29,11 @@ body {
     text-align: center; /* İçeriklerin merkeze oturmasını sağlar */
 }
 
-/* LOGO VE MENÜ */
 .bilgimatiklogo {
-    display: table;
-    margin: 0 auto 20px auto;
-    max-width: 210px;
+    display: block;
+    margin: 0 auto 15px auto; /* Boşluğu 20'den 15'e indirdik */
+    width: 100%;              /* Esnekliği korur */
+    max-width: 150px;         /* 210px'ten 150px'e düşürdük, daha zarif duracak */
     height: auto;
 }
 
@@ -78,15 +78,20 @@ h1 {
     margin: 0 auto; 
 }
 
-/* Banner Görselleri */
+/* Banner alanı ve resim hizalaması */
 .sayfabanner {
-    margin-bottom: 20px;
+    width: 100%;
+    margin: 0 auto 20px auto; /* Üst/Alt boşluk ve merkezleme */
+    text-align: center;       /* İçindeki resmi merkeze alır */
+    overflow: hidden;
 }
 
 .sayfabanner img {
-    max-width: 100%;
+    display: inline-block;    /* Resmi inline gibi davranmaya zorlar */
+    max-width: 100%;          /* Kutudan taşmasını engeller */
     height: auto;
-    display: table;
+    border: 1px solid #ddd;   /* İstersen şık bir çerçeve ekler */
+    border-radius: 4px;       /* Köşeleri hafif yumuşatır */
 }
 
 /* GALERİ */
