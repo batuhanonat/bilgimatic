@@ -1,101 +1,111 @@
 @charset "utf-8";
 
-#header{
-	width:800px;
-	height:100px;
-	background:#fff;
-
-	margin:0 auto 0 auto;
-	display:table;
-}
-#content{
-	width:770px;
-	height:auto;
-	background:#fff;
-	padding:10px 15px 27px 15px;
-
-    margin:20px auto 20px auto;
-	display:table;
-}
-#content h1,#content .sayfabanner{
-	margin:0 auto 15px auto;
-	display:table;
-
-	height:auto;
-}
-#content .yazialani p{
-	font-size: 13px;
-}
-#footer{
-	width:770px;
-	height:13px;
-	padding:15px 15px 15px 15px;
-	background:#fff;
-
-	margin:0 auto 0 auto;
-	display:table;
-}
-#footer p{
-	text-align:center;
-	font-size:13px;
-	font-weight:bold;
-}
-.bilgimatiklogo{
-	margin:15px auto 17px auto;
-	display:table;
-
-	width:210px;
-	height:120px;
-}
-.menu{
-    margin:20px auto 20px auto;
-	display:table;
-}
-.menu li{
-    float:left;
-	list-style-type:none;
-	margin-right:15px;
-
-}
-.menu li a{
-    color:#000;
-	font-size:18px;
-	text-decoration:none;
-
-	padding:5px 10px;
-	border:1px solid #000;
-}
-.menu li a:hover{
-    color:#f00;
-	border:1px solid #f00;
-}
-.galeri{
-    margin:0 auto 0 auto;
-	display: table;
-}
-.galeri .fotograf{
-	float:left;
-    width:300px;
-	height:auto;
-	border:1px solid #000;
-	padding:5px 5px 5px 5px;
-	background:#007ce7;
-	margin:0px 15px 15px 45px;
-}
-.galeri .fotograf img{
-    width:100%;
-	height:auto;
-}
-.secili{
-    color:#f00 !important;
-	border:1px solid #f00 !important;
-}
-#content .yazi p{
-	font-size: 15px;
+/* Genel Tasarım Ayarları */
+body {
+    margin: 0;
+    padding: 0;
 }
 
-/* --- İletişim Formu Yeni Stilleri --- */
+#header {
+    width: 100%;
+    max-width: 800px;
+    height: auto; /* Yüksekliği otomatik yapıyoruz */
+    background: #fff;
+    margin: 0 auto;
+    display: table;
+}
 
+#content {
+    width: 90%; /* Mobilde ekranın %90'ını kaplar */
+    max-width: 770px;
+    height: auto;
+    background: #fff;
+    padding: 20px 15px;
+    margin: 20px auto;
+    display: table;
+    box-sizing: border-box; /* Padding'in genişliğe dahil olmasını sağlar */
+}
+
+#content h1, #content .sayfabanner {
+    margin: 0 auto 15px auto;
+    display: table;
+    height: auto;
+    max-width: 100%;
+}
+
+#footer {
+    width: 90%;
+    max-width: 770px;
+    padding: 15px;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    display: table;
+    box-sizing: border-box;
+}
+
+#footer p {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.bilgimatiklogo {
+    margin: 15px auto;
+    display: table;
+    width: 80%; /* Logoyu ekranın %80'i kadar yapar */
+    max-width: 210px;
+    height: auto;
+}
+
+.menu {
+    margin: 20px auto;
+    display: table;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+    list-style-type: none;
+    margin-right: 15px;
+}
+
+.menu li a {
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #000;
+}
+
+.menu li a:hover, .secili {
+    color: #f00 !important;
+    border: 1px solid #f00 !important;
+}
+
+/* Galeri Ayarları */
+.galeri {
+    margin: 0 auto;
+    display: table;
+    width: 100%;
+}
+
+.galeri .fotograf {
+    float: left;
+    width: 45%; /* Yan yana iki resim için */
+    height: auto;
+    border: 1px solid #000;
+    padding: 5px;
+    background: #007ce7;
+    margin: 1%;
+    box-sizing: border-box;
+}
+
+.galeri .fotograf img {
+    width: 100%;
+    height: auto;
+}
+
+/* İletişim Formu Stilleri */
 .formalani {
     margin-top: 20px;
     padding: 15px;
@@ -109,8 +119,7 @@
 .formalani label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 10px;
+    margin: 10px 0 5px 0;
 }
 
 .formalani input[type="text"],
@@ -135,8 +144,18 @@
     cursor: pointer;
     margin-top: 15px;
     font-size: 16px;
+    width: 100%;
 }
 
-.formalani input[type="submit"]:hover {
-    background-color: #f00;
+/* --- Mobil Uyum (Media Query) --- */
+@media screen and (max-width: 600px) {
+    .menu li {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    .galeri .fotograf {
+        width: 98%; /* Mobilde resimleri tek sütun yapar */
+    }
 }
