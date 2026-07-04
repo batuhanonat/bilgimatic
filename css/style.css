@@ -1,38 +1,36 @@
 @charset "utf-8";
 
-/* Genel Sıfırlama */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f0f0f0; /* Arka planı görmen için gri yaptım, istersen kaldır */
 }
 
-/* Header ve İçerik Simetrisi için Ortak Genişlik */
+/* Kapsayıcılar: Birleşmeleri için margin-bottom/top değerlerini sıfırladık */
 #header, #content, #footer {
-    width: 90%;             /* Mobil için esnek */
-    max-width: 800px;       /* Masaüstü için sabit merkez */
-    margin: 0 auto;         /* Tam simetrik ortalama */
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
     background: #fff;
     box-sizing: border-box;
 }
 
-/* Header Tasarımı */
 #header {
-    margin-top: 20px;
     padding: 20px 0;
-    display: table;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Header ile content ayrımı net olsun */
 }
 
-.bilgimatiklogo {
-    margin: 0 auto 20px auto;
-    display: table;
-    width: 80%;
-    max-width: 210px;
-    height: auto;
+.bilgimatiklogo{
+	margin:15px auto 17px auto;
+	display:table;
+
+	width:210px;
+	height:120px;
 }
 
-/* Navigasyon Menüsü */
 .menu {
     margin: 0;
     padding: 0;
@@ -42,7 +40,7 @@ body {
 .menu li {
     display: inline-block;
     list-style-type: none;
-    margin: 5px 10px;
+    margin: 5px;
 }
 
 .menu li a {
@@ -59,16 +57,14 @@ body {
     border: 1px solid #f00 !important;
 }
 
-/* İçerik ve Başlık Tasarımı */
 #content {
     padding: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    min-height: 400px; /* İçerik az olsa bile sayfa boş kalmasın */
 }
 
 h1 {
-    text-align: center; /* Başlıklar artık tam ortalı */
-    color: #333;
+    text-align: center;
+    margin-top: 0;
 }
 
 .sayfabanner img {
@@ -78,15 +74,14 @@ h1 {
     margin: 20px auto;
 }
 
-/* Galeri ve Yazı Alanı */
 .yazialani {
-    text-align: justify; /* Yazıların iki yana yaslı olması simetriyi artırır */
+    text-align: justify;
 }
 
 .galeri {
     margin: 20px auto;
-    display: table;
     width: 100%;
+    overflow: hidden;
 }
 
 .galeri .fotograf {
@@ -105,9 +100,7 @@ h1 {
     display: block;
 }
 
-/* Form Alanı */
 .formalani {
-    margin-top: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
@@ -116,22 +109,20 @@ h1 {
 .formalani input, .formalani textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     box-sizing: border-box;
 }
 
-/* Footer */
 #footer {
     padding: 20px;
     text-align: center;
-    margin-bottom: 30px;
+    border-top: 1px solid #ddd;
 }
 
-/* --- Mobil Uyum (Media Queries) --- */
 @media screen and (max-width: 600px) {
     .menu li {
         display: block;
-        margin: 10px 0;
+        margin: 5px 0;
     }
     
     .galeri .fotograf {
