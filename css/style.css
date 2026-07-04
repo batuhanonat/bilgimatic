@@ -19,8 +19,8 @@ body {
 
 /* Header Tasarımı */
 #header {
-    margin-top: 10px;
-    padding: 10px 0;
+    margin-top: 20px;
+    padding: 20px 0;
     display: table;
 }
 
@@ -122,9 +122,9 @@ h1 {
 
 /* Footer */
 #footer {
-    padding: 10px;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* --- Mobil Uyum (Media Queries) --- */
