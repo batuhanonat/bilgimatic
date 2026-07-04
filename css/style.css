@@ -1,25 +1,26 @@
 @charset "utf-8";
 
-
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f0f0f0; /* Arka planı görmen için gri yaptım, istersen kaldır */
 }
 
-
+/* Kapsayıcılar: Birleşmeleri için margin-bottom/top değerlerini sıfırladık */
 #header, #content, #footer {
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
     background: #fff;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 #header {
     padding: 20px 0;
     text-align: center;
+    border-bottom: 1px solid #ddd; /* Header ile content ayrımı net olsun */
 }
 
 .bilgimatiklogo {
@@ -30,12 +31,10 @@ body {
     height: auto;
 }
 
-
 .menu {
     margin: 0;
     padding: 0;
     text-align: center;
-    width: 100%;
 }
 
 .menu li {
@@ -58,10 +57,9 @@ body {
     border: 1px solid #f00 !important;
 }
 
-
 #content {
     padding: 30px;
-    margin-top: 0; 
+    min-height: 400px; /* İçerik az olsa bile sayfa boş kalmasın */
 }
 
 h1 {
@@ -79,7 +77,6 @@ h1 {
 .yazialani {
     text-align: justify;
 }
-
 
 .galeri {
     margin: 20px auto;
@@ -103,7 +100,6 @@ h1 {
     display: block;
 }
 
-
 .formalani {
     padding: 20px;
     border: 1px solid #ccc;
@@ -117,13 +113,11 @@ h1 {
     box-sizing: border-box;
 }
 
-
 #footer {
     padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
+    border-top: 1px solid #ddd;
 }
-
 
 @media screen and (max-width: 600px) {
     .menu li {
