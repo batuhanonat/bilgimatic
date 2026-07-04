@@ -1,31 +1,42 @@
 @charset "utf-8";
 
-/* EVRENSEL SIFIRLAMA: Her şey kutu modeline uysun */
-* {
-    box-sizing: border-box;
+body {
     margin: 0;
     padding: 0;
-}
-
-body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f0f0f0; /* Arka planı biraz gri yaparak beyaz kutuların farkını belirginleştirdim */
 }
 
-/* 800px sabit genişlik ve tam merkezleme */
-#header, #content, #footer {
+/* Header ve Content'i ayrı tanımlıyoruz */
+#header {
     width: 90%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto 10px auto; /* Üstten 20px, alttan 10px boşluk */
     background: #fff;
-}
-
-/* HEADER: Orantısal denge */
-#header {
     padding: 20px;
     text-align: center;
 }
 
+#content {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 20px auto; /* Alttan 20px boşluk */
+    background: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#footer {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Logo ve Menü */
 .bilgimatiklogo {
     display: block;
     margin: 0 auto 20px auto;
@@ -35,25 +46,24 @@ body {
 }
 
 .menu {
-    list-style: none;
-    text-align: center;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .menu li {
     display: inline-block;
+    list-style-type: none;
     margin: 5px;
 }
 
 .menu li a {
-    display: block;
     color: #000;
     font-size: 16px;
     text-decoration: none;
     padding: 8px 12px;
     border: 1px solid #000;
-    transition: all 0.3s;
+    display: block;
 }
 
 .menu li a:hover, .secili {
@@ -61,30 +71,24 @@ body {
     border: 1px solid #f00 !important;
 }
 
-/* CONTENT: Header ile tam hizalı */
-#content {
-    padding: 30px;
-    margin-top: 0;
-    border-top: 0;
-}
-
+/* Başlık ve İçerik */
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 0;
 }
 
 .sayfabanner img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 20px auto;
 }
 
 .yazialani {
     text-align: justify;
 }
 
-/* GALERİ: Simetrik iki sütun */
+/* Galeri */
 .galeri {
     margin: 20px auto;
     width: 100%;
@@ -95,6 +99,7 @@ h1 {
     float: left;
     width: 47%;
     margin: 1.5%;
+    box-sizing: border-box;
     border: 1px solid #000;
     padding: 5px;
     background: #007ce7;
@@ -102,10 +107,11 @@ h1 {
 
 .galeri .fotograf img {
     width: 100%;
+    height: auto;
     display: block;
 }
 
-/* İLETİŞİM FORM */
+/* Form */
 .formalani {
     padding: 20px;
     border: 1px solid #ccc;
@@ -116,16 +122,10 @@ h1 {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
-/* FOOTER */
-#footer {
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* MOBİL: 600px altında menü ve resimler dikey */
+/* Mobil */
 @media screen and (max-width: 600px) {
     .menu li {
         display: block;
