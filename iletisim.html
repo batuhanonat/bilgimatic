@@ -1,65 +1,65 @@
 <html>
     <head>
-	    <title>İletişim | Bilgimatic</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>İletişim | Bilgimatic</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta name="description" content="Bilgi, Bilgi öğreniyorum." />
-		<meta name="keywords" content="Bilgimatic, Önemli Bilgi, Bilgi öğreniyorum" />
+        <meta name="description" content="Bilgi, Bilgi öğreniyorum." />
+        <meta name="keywords" content="Bilgimatic, Önemli Bilgi, Bilgi öğreniyorum" />
 
-		<link href="css/style.css" rel="stylesheet" type="text/css">
-		<link rel="shortcut icon" href="img/icon.jpg">
-	</head>
-	<body background="img/mao.gif">
-	    <div id="header">
-		    <a href="index.html" title="Anasayfa">
-		        <img src="img/logo.jpg" alt="logo" class="bilgimatiklogo" />
-			</a>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="img/icon.jpg">
+    </head>
+    <body background="img/mao.gif">
+        <div id="header">
+            <a href="index.html" title="Anasayfa">
+                <img src="img/logo.jpg" alt="logo" class="bilgimatiklogo" />
+            </a>
 
-			<ul class="menu">
-			    <li><a href="index.html" title="Anasayfa">Anasayfa</a></li>
-				<li><a href="haberler.html" title="Haberler">Haberler</a></li>
-				<li><a href="hakkimizda.html" title="Hakkımızda">Hakkımızda</a></li>
-				<li><a href="fotograf-galerisi.html" title="Fotoğraf Galerisi">Fotoğraf Galerisi</a></li>
-				<li><a href="iletisim.html" title="İletişim" class="secili">İletişim</a></li>
-			</ul>
-		</div>
-		<div id="content">
-		    <h1>İletişim</h1>
-			<div class="sayfabanner">
-			    <img src="img/ilet.jpg" />
-			</div>
+            <ul class="menu">
+                <li><a href="index.html" title="Anasayfa">Anasayfa</a></li>
+                <li><a href="haberler.html" title="Haberler">Haberler</a></li>
+                <li><a href="hakkimizda.html" title="Hakkımızda">Hakkımızda</a></li>
+                <li><a href="fotograf-galerisi.html" title="Fotoğraf Galerisi">Fotoğraf Galerisi</a></li>
+                <li><a href="iletisim.html" title="İletişim" class="secili">İletişim</a></li>
+            </ul>
+        </div>
+        
+        <div id="content">
+            <h1>İletişim</h1>
+            <div class="sayfabanner">
+                <img src="img/ilet.jpg" />
+            </div>
 
-			<h2>İletişim Bilgileri</h2>
+            <h2>İletişim Bilgileri</h2>
+            <div class="yazi">
+                <p><strong>Mail:</strong> batuhaniletisim08@gmail.com</p>
+            </div>
 
-		    <div class="yazi">
-				<p><b>Mail : batuhaniletisim08@gmail.com</b></p>
-			</div>
+            <h2>İletişim Formu</h2>
+            <div class="formalani">
+                <form action="https://formspree.io/f/mnjklzoe" method="POST" id="formgonder">
+                    <label for="ad_soyad">Ad Soyad:</label>
+                    <input type="text" placeholder="Adınız Soyadınız" name="ad_soyad" id="ad_soyad" required />
+                    
+                    <label for="e_posta">E-Posta:</label>
+                    <input type="email" placeholder="E-posta adresiniz" name="email" id="e_posta" required />
+                    
+                    <label for="konu">Konu:</label>
+                    <input type="text" placeholder="Mesajınızın konusu" name="konu" id="konu" required />
+                    
+                    <label for="mesaj">Mesajınız:</label>
+                    <textarea name="message" id="mesaj" placeholder="Mesajınızı buraya yazabilirsiniz..." required></textarea>
+                    
+                    <input type="submit" name="gonder" value="Mesajı Gönder" />
+                </form>
+            </div>
 
-			<h2>İletişim Formu</h2>
-
-			<div class="formalani">
-                <form class="formgonder" action="https://formspree.io/f/mnjklzoe" method="POST" id="formgonder" name="formgonder">
-				    <label for="ad_soyad">Ad Soyad: </label>
-					<input type="text" placeholder="Ad Soyad" name="ad_soyad" id="ad_soyad" required />
-					<br><br>
-					<label for="e_posta">E-Posta: </label>
-					<input type="email" placeholder="E-Posta" name="email" id="e_posta" required />
-					<br><br>
-					<label for="konu" >Konu: </label>
-					<input type="text" placeholder="Konu" name="konu" id="konu" required />
-					<br><br>
-					<label for="mesaj">Mesajınız: </label>
-					<textarea name="message" id="mesaj" placeholder="Mesajınız" required></textarea>
-					<br><br>
-					<input type="submit" name="gonder" value="Mesajı Gönder" />
-				</form>
-                </div>
-
-		    <div style="clear:both;"></div>
-		</div>
-		<div id="footer">
-			<p>İletişim Bilgileri | Tüm haklar saklıdır.</p>
-		</div>
-	</body>
+            <div style="clear:both;"></div>
+        </div>
+        
+        <div id="footer">
+            <p>İletişim Bilgileri | Tüm haklar saklıdır.</p>
+        </div>
+    </body>
 </html>
