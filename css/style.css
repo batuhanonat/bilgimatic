@@ -18,14 +18,12 @@ body {
 }
 
 /* Header Tasarımı */
-#header{
-	width:800px;
-	height:100px;
-	background:#fff;
-
-	margin:0 auto 0 auto;
-	display:table;
+#header {
+    margin-top: 10px;
+    padding: 10px 0;
+    display: table;
 }
+
 .bilgimatiklogo {
     margin: 0 auto 20px auto;
     display: table;
@@ -124,9 +122,9 @@ h1 {
 
 /* Footer */
 #footer {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* --- Mobil Uyum (Media Queries) --- */
