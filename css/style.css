@@ -8,16 +8,15 @@ body {
     line-height: 1.6;
 }
 
-/* Tüm ana kapsayıcılar aynı genişlikte ve ortalı */
+
 #header, #content, #footer {
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
     background: #fff;
-    box-sizing: border-box; /* Genişliğin dışa taşmasını engeller */
+    box-sizing: border-box; 
 }
 
-/* Header tasarımı */
 #header {
     padding: 20px 0;
     text-align: center;
@@ -31,7 +30,7 @@ body {
     height: auto;
 }
 
-/* Menü hizalaması */
+
 .menu {
     margin: 0;
     padding: 0;
@@ -59,10 +58,10 @@ body {
     border: 1px solid #f00 !important;
 }
 
-/* İçerik alanı simetrisi */
+
 #content {
     padding: 30px;
-    margin-top: 0; /* Header ile birleşmesi için */
+    margin-top: 0; 
 }
 
 h1 {
@@ -81,7 +80,7 @@ h1 {
     text-align: justify;
 }
 
-/* Galeri */
+
 .galeri {
     margin: 20px auto;
     width: 100%;
@@ -104,7 +103,7 @@ h1 {
     display: block;
 }
 
-/* İletişim Formu */
+
 .formalani {
     padding: 20px;
     border: 1px solid #ccc;
@@ -118,14 +117,14 @@ h1 {
     box-sizing: border-box;
 }
 
-/* Footer */
+
 #footer {
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Mobil uyum */
+
 @media screen and (max-width: 600px) {
     .menu li {
         display: block;
