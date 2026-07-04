@@ -1,80 +1,52 @@
 @charset "utf-8";
 
-/* Genel Tasarım Ayarları */
+/* Genel Sıfırlama ve Gövde */
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif; /* Okunabilirlik için font eklendi */
+    line-height: 1.6;
 }
 
+/* Header Tasarımı */
 #header {
     width: 100%;
     max-width: 800px;
-    height: auto; /* Yüksekliği otomatik yapıyoruz */
+    height: auto;
     background: #fff;
     margin: 0 auto;
     display: table;
 }
 
-#content {
-    width: 90%; /* Mobilde ekranın %90'ını kaplar */
-    max-width: 770px;
-    height: auto;
-    background: #fff;
-    padding: 20px 15px;
-    margin: 20px auto;
-    display: table;
-    box-sizing: border-box; /* Padding'in genişliğe dahil olmasını sağlar */
-}
-
-#content h1, #content .sayfabanner {
-    margin: 0 auto 15px auto;
-    display: table;
-    height: auto;
-    max-width: 100%;
-}
-
-#footer {
-    width: 90%;
-    max-width: 770px;
-    padding: 15px;
-    background: #fff;
-    margin: 0 auto 20px auto;
-    display: table;
-    box-sizing: border-box;
-}
-
-#footer p {
-    text-align: center;
-    font-size: 13px;
-    font-weight: bold;
-}
-
 .bilgimatiklogo {
     margin: 15px auto;
     display: table;
-    width: 80%; /* Logoyu ekranın %80'i kadar yapar */
+    width: 80%;
     max-width: 210px;
     height: auto;
 }
 
+/* Navigasyon Menüsü */
 .menu {
     margin: 20px auto;
     display: table;
     padding: 0;
+    text-align: center;
 }
 
 .menu li {
-    float: left;
+    display: inline-block; /* Liste maddelerini yan yana tutar */
     list-style-type: none;
-    margin-right: 15px;
+    margin: 5px 10px;
 }
 
 .menu li a {
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 8px 12px;
     border: 1px solid #000;
+    display: block;
 }
 
 .menu li a:hover, .secili {
@@ -82,36 +54,57 @@ body {
     border: 1px solid #f00 !important;
 }
 
+/* İçerik Alanı */
+#content {
+    width: 90%;
+    max-width: 770px;
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    display: table;
+    box-sizing: border-box; /* Çok önemli: Genişliğin taşmasını engeller */
+}
+
+.yazialani {
+    margin-top: 15px;
+}
+
+.sayfabanner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Galeri Ayarları */
 .galeri {
-    margin: 0 auto;
+    margin: 20px auto;
     display: table;
     width: 100%;
 }
 
 .galeri .fotograf {
     float: left;
-    width: 45%; /* Yan yana iki resim için */
-    height: auto;
+    width: 47%; /* Yan yana iki resim için */
+    margin: 1.5%;
+    box-sizing: border-box;
     border: 1px solid #000;
     padding: 5px;
     background: #007ce7;
-    margin: 1%;
-    box-sizing: border-box;
 }
 
 .galeri .fotograf img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
-/* İletişim Formu Stilleri */
+/* İletişim Formu */
 .formalani {
     margin-top: 20px;
     padding: 15px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
-    display: table;
     width: 100%;
     box-sizing: border-box;
 }
@@ -126,7 +119,7 @@ body {
 .formalani input[type="email"],
 .formalani textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #999;
     border-radius: 4px;
     box-sizing: border-box;
@@ -139,23 +132,34 @@ body {
 .formalani input[type="submit"] {
     background-color: #000;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px;
     border: none;
     cursor: pointer;
     margin-top: 15px;
-    font-size: 16px;
     width: 100%;
+    font-size: 16px;
 }
 
-/* --- Mobil Uyum (Media Query) --- */
+/* Footer */
+#footer {
+    width: 90%;
+    max-width: 770px;
+    padding: 15px;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* --- Mobil Uyum (Media Queries) --- */
 @media screen and (max-width: 600px) {
     .menu li {
-        float: none;
-        text-align: center;
-        margin: 10px 0;
+        display: block; /* Mobilde menü maddelerini alt alta dizer */
+        margin: 5px 0;
     }
     
     .galeri .fotograf {
-        width: 98%; /* Mobilde resimleri tek sütun yapar */
+        width: 97%; /* Mobilde resimleri tek sütun yapar */
+        margin: 1.5% 0;
     }
 }
