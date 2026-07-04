@@ -31,7 +31,7 @@ body {
 
 /* LOGO VE MENÜ */
 .bilgimatiklogo {
-    display: block;
+    display: table;
     margin: 0 auto 20px auto;
     max-width: 210px;
     height: auto;
@@ -86,7 +86,7 @@ h1 {
 .sayfabanner img {
     max-width: 100%;
     height: auto;
-    display: inline-block;
+    display: table;
 }
 
 /* GALERİ */
