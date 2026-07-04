@@ -114,20 +114,38 @@ h1 {
     display: block;
 }
 
-/* İLETİŞİM FORMU */
 .formalani {
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    padding: 30px; /* Biraz daha nefes aldırıyoruz */
+    border: 2px solid #e0e0e0; /* Kenarları biraz daha vurguladık */
+    background-color: #fff; /* İletişim sayfasının beyazlığıyla bütünleşsin */
     max-width: 600px;
-    margin: 0 auto;
-    text-align: left; /* Form kutularının sola yaslı olması daha iyidir */
+    margin: 20px auto;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Hafif bir gölge ile "kart" görünümü verir */
+    border-radius: 8px; /* Köşeleri yuvarlatarak daha modern bir dokunuş */
 }
 
+/* Input alanlarını daha estetik yapalım */
 .formalani input, .formalani textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Köşeleri yuvarlatılmış kutular şık durur */
+}
+
+/* Gönder butonunu daha belirgin yapalım */
+.formalani input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: background 0.3s;
+}
+
+.formalani input[type="submit"]:hover {
+    background-color: #f00;
 }
 
 /* FOOTER */
