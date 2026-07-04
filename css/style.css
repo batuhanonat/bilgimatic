@@ -23,12 +23,12 @@ body {
     border-bottom: 1px solid #ddd; /* Header ile content ayrımı net olsun */
 }
 
-.bilgimatiklogo{
-	margin:15px auto 17px auto;
-	display:table;
-
-	width:210px;
-	height:120px;
+.bilgimatiklogo {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 80%;
+    max-width: 210px;
+    height: auto;
 }
 
 .menu {
