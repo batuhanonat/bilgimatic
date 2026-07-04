@@ -1,46 +1,35 @@
 @charset "utf-8";
 
+/* Standartları belirleyelim */
+* {
+    box-sizing: border-box; /* Bu, kutuların orantısız olmasını engeller */
+}
+
 body {
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Kenarlardan biraz nefes aldırır */
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0; /* Arka planı biraz gri yaparak beyaz kutuların farkını belirginleştirdim */
+    background-color: #e0e0e0; /* Kutuların ayrık olduğunu net görebilmen için gri arka plan */
 }
 
-/* Header ve Content'i ayrı tanımlıyoruz */
+/* Header, Content ve Footer için ortak orantı ayarı */
+#header, #content, #footer {
+    width: 100%;
+    max-width: 800px; /* Hepsi aynı maksimum genişliğe sahip */
+    margin: 0 auto 20px auto; /* Hepsi ortalı ve aralarında 20px boşluk var */
+    background: #fff;
+    padding: 20px;
+}
+
+/* Header tasarımı */
 #header {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto 10px auto; /* Üstten 20px, alttan 10px boşluk */
-    background: #fff;
-    padding: 20px;
     text-align: center;
 }
 
-#content {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto 20px auto; /* Alttan 20px boşluk */
-    background: #fff;
-    padding: 30px;
-    box-sizing: border-box;
-}
-
-#footer {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    background: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Logo ve Menü */
 .bilgimatiklogo {
     display: block;
     margin: 0 auto 20px auto;
-    width: 80%;
     max-width: 210px;
     height: auto;
 }
@@ -71,7 +60,11 @@ body {
     border: 1px solid #f00 !important;
 }
 
-/* Başlık ve İçerik */
+/* Content alanı */
+#content {
+    padding: 30px;
+}
+
 h1 {
     text-align: center;
     margin-top: 0;
@@ -91,15 +84,13 @@ h1 {
 /* Galeri */
 .galeri {
     margin: 20px auto;
-    width: 100%;
-    display: table;
+    overflow: hidden;
 }
 
 .galeri .fotograf {
     float: left;
     width: 47%;
     margin: 1.5%;
-    box-sizing: border-box;
     border: 1px solid #000;
     padding: 5px;
     background: #007ce7;
@@ -107,11 +98,10 @@ h1 {
 
 .galeri .fotograf img {
     width: 100%;
-    height: auto;
     display: block;
 }
 
-/* Form */
+/* İletişim */
 .formalani {
     padding: 20px;
     border: 1px solid #ccc;
@@ -122,10 +112,15 @@ h1 {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    box-sizing: border-box;
 }
 
-/* Mobil */
+/* Footer */
+#footer {
+    text-align: center;
+    margin-bottom: 0; /* Sayfanın en altı olduğu için */
+}
+
+/* Mobil uyum */
 @media screen and (max-width: 600px) {
     .menu li {
         display: block;
