@@ -1,46 +1,43 @@
 @charset "utf-8";
 
+/* Genel Sıfırlama ve Gövde */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Okunabilirlik için font eklendi */
     line-height: 1.6;
-    background-color: #f0f0f0; /* Arka planı görmen için gri yaptım, istersen kaldır */
 }
 
-/* Kapsayıcılar: Birleşmeleri için margin-bottom/top değerlerini sıfırladık */
-#header, #content, #footer {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    box-sizing: border-box;
-}
-
+/* Header Tasarımı */
 #header {
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 1px solid #ddd; /* Header ile content ayrımı net olsun */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    background: #fff;
+    margin: 0 auto;
+    display: table;
 }
 
 .bilgimatiklogo {
-    display: block;
-    margin: 0 auto 20px auto;
+    margin: 15px auto;
+    display: table;
     width: 80%;
     max-width: 210px;
     height: auto;
 }
 
+/* Navigasyon Menüsü */
 .menu {
-    margin: 0;
+    margin: 20px auto;
+    display: table;
     padding: 0;
     text-align: center;
 }
 
 .menu li {
-    display: inline-block;
+    display: inline-block; /* Liste maddelerini yan yana tutar */
     list-style-type: none;
-    margin: 5px;
+    margin: 5px 10px;
 }
 
 .menu li a {
@@ -57,36 +54,41 @@ body {
     border: 1px solid #f00 !important;
 }
 
+/* İçerik Alanı */
 #content {
-    padding: 30px;
-    min-height: 400px; /* İçerik az olsa bile sayfa boş kalmasın */
+    width: 90%;
+    max-width: 770px;
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    display: table;
+    box-sizing: border-box; /* Çok önemli: Genişliğin taşmasını engeller */
 }
-
 h1 {
-    text-align: center;
-    margin-top: 0;
+    text-align: center; /* Başlıklar artık tam ortalı */
+    color: #333;
+}
+.yazialani {
+    margin-top: 15px;
 }
 
 .sayfabanner img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
-.yazialani {
-    text-align: justify;
-}
-
+/* Galeri Ayarları */
 .galeri {
     margin: 20px auto;
+    display: table;
     width: 100%;
-    overflow: hidden;
 }
 
 .galeri .fotograf {
     float: left;
-    width: 47%;
+    width: 47%; /* Yan yana iki resim için */
     margin: 1.5%;
     box-sizing: border-box;
     border: 1px solid #000;
@@ -100,33 +102,67 @@ h1 {
     display: block;
 }
 
+/* İletişim Formu */
 .formalani {
-    padding: 20px;
+    margin-top: 20px;
+    padding: 15px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
-}
-
-.formalani input, .formalani textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
     box-sizing: border-box;
 }
 
-#footer {
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #ddd;
+.formalani label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
 }
 
+.formalani input[type="text"],
+.formalani input[type="email"],
+.formalani textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formalani textarea {
+    height: 150px;
+}
+
+.formalani input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Footer */
+#footer {
+    width: 90%;
+    max-width: 770px;
+    padding: 15px;
+    background: #fff;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* --- Mobil Uyum (Media Queries) --- */
 @media screen and (max-width: 600px) {
     .menu li {
-        display: block;
+        display: block; /* Mobilde menü maddelerini alt alta dizer */
         margin: 5px 0;
     }
     
     .galeri .fotograf {
-        width: 97%;
+        width: 97%; /* Mobilde resimleri tek sütun yapar */
         margin: 1.5% 0;
     }
 }
