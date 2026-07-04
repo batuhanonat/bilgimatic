@@ -8,7 +8,11 @@ body {
     line-height: 1.6;
 }
 
-/* Header Tasarımı */
+h1 {
+    text-align: center;
+    margin-bottom: 25px; /* Başlık ile altındaki içerik arasına biraz boşluk ekler */
+}
+
 #header {
     width: 100%;
     max-width: 800px;
